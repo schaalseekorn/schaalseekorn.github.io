@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schaalseekorn</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --sand: #c4b49a;
+      --sand-light: #d4c6ae;
+      --white: #ffffff;
+      --black: #1a1a1a;
+      --font: 'Georgia', 'Times New Roman', serif;
+      --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--black);
+      background: var(--white);
+    }
+
+    /* ── HERO ── */
+    #hero {
+      position: relative;
+      width: 100%;
+      height: 100svh;
+      min-height: 500px;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    #hero img.hero-bg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    #hero .hero-logo {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 12%;
+    }
+
+    #hero .hero-logo img {
+      width: clamp(200px, 28vw, 380px);
+      filter: drop-shadow(0 2px 12px rgba(0,0,0,0.2));
+    }
+
+    /* ── SECTIONS GENERAL ── */
+    section {
+      padding: 80px 24px;
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-family: var(--font-sans);
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 1px;
+      background: var(--black);
+      margin: 12px auto 0;
+    }
+
+    /* ── THREE PILLARS ── */
+    #pillars {
+      background: var(--white);
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+    }
+
+    .pillar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .pillar-label {
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #666;
+      margin-bottom: 8px;
+    }
+
+    .pillar h3 {
+      font-family: var(--font-sans);
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      font-weight: 700;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .pillar img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ── SIEGEL / ICONS ── */
+    #siegel {
+      background: var(--sand);
+    }
+
+    .siegel-grid {
+      display: flex;
+      justify-content: center;
+      gap: clamp(32px, 8vw, 96px);
+      flex-wrap: wrap;
+    }
+
+    .siegel-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .siegel-item img {
+      width: clamp(90px, 14vw, 140px);
+    }
+
+    /* ── REGION ── */
+    #region {
+      background: var(--white);
+    }
+
+    .region-text {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+      line-height: 1.8;
+      color: #333;
+    }
+
+    /* ── KONTAKT ── */
+    #kontakt {
+      background: var(--sand);
+      text-align: center;
+    }
+
+    #kontakt address {
+      font-style: normal;
+      font-size: clamp(0.9rem, 1.5vw, 1rem);
+      line-height: 2;
+    }
+
+    #kontakt a {
+      color: var(--black);
+      text-decoration: underline;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--sand);
+      border-top: 1px solid rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 20px 24px;
+      font-size: 0.8rem;
+    }
+
+    footer a {
+      color: var(--black);
+      text-decoration: underline;
+      margin: 0 12px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      section {
+        padding: 56px 20px;
+      }
+
+      .pillars-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section id="hero">
+    <img class="hero-bg" src="website_header.jpg" alt="Luftaufnahme Schaalseeregion mit Feldern" />
+    <div class="hero-logo">
+      <img src="logo_wide.png" alt="Schaalseekorn" />
+    </div>
+  </section>
+
+  <!-- DREI SÄULEN -->
+  <section id="pillars">
+    <div class="section-inner">
+      <div class="pillars-grid">
+
+        <div class="pillar">
+          <span class="pillar-label">Unser Familienbetrieb</span>
+          <h3>Neu-Willhelmsthal</h3>
+          <img src="teaser_unser_hof.png" alt="Unser Hof in Neu-Willhelmsthal" />
+        </div>
+
+        <div class="pillar">
+          <span class="pillar-label">Unser Angebot</span>
+          <h3>Hochwertig und regional</h3>
+          <img src="teaser_unser_mehl.png" alt="Schaalseekorn Produkte – Weizenmehl und Raps" />
+        </div>
+
+        <div class="pillar">
+          <span class="pillar-label">Unser Anliegen</span>
+          <h3>Naturbewusster Ackerbau</h3>
+          <img src="teaser_unser_naturbewusstsein.png" alt="Naturbewusster Ackerbau an der Schaalseeregion" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SIEGEL -->
+  <section id="siegel">
+    <div class="section-inner">
+      <div class="siegel-grid">
+        <div class="siegel-item">
+          <img src="siegel_windkraft_braun.png" alt="Mit Windkraft" />
+        </div>
+        <div class="siegel-item">
+          <img src="siegel_backstark_braun.png" alt="Backstark" />
+        </div>
+        <div class="siegel-item">
+          <img src="siegel_naturbewusst_braun.png" alt="Naturbewusst" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIE SCHAALSEEREGION -->
+  <section id="region">
+    <div class="section-inner">
+      <h2 class="section-title">Die Schaalseeregion</h2>
+      <p class="region-text">
+        Die Schaalseeregion, gelegen zwischen Lübeck, Schwerin und Hamburg, bietet eine einzigartige Kultur- und Naturlandschaft, die von 1945–1989 durch die innerdeutsche Grenze in Ost und West geteilt wurde. Die Grenze verlief mitten durch den See und wurde vor allem von der Ostseite stark abgeschirmt. Dies brachte harte Einschnitte für die dort lebenden Menschen mit sich, ermöglichte der Natur aber in besonderer Weise, sich zu entfalten. Seit 1989 darf die gesamte Schaalseeregion wieder zusammenwachsen und ist nur noch durch die Landesgrenze voneinander getrennt. Sie zieht viele Menschen mit ihrem sanften Tourismus an.
+      </p>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt">
+    <div class="section-inner">
+      <h2 class="section-title">Kontakt</h2>
+      <address>
+        Stephan und Yvonne Struve<br />
+        Neu-Willhelmsthal<br />
+        23883 Seedorf<br />
+        <a href="tel:+4901732992915">+49 (0)173-2992915</a><br />
+        <a href="mailto:schaalseekorn@gmail.com">schaalseekorn@gmail.com</a>
+      </address>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+  </footer>
+
+</body>
+</html>

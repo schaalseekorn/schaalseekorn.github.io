@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum – Schaalseekorn</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --sand: #c4b49a;
+      --black: #1a1a1a;
+      --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--black);
+      background: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: var(--sand);
+      padding: 24px;
+      text-align: center;
+    }
+
+    header a {
+      text-decoration: none;
+      color: var(--black);
+    }
+
+    header img {
+      height: 48px;
+    }
+
+    main {
+      flex: 1;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 64px 24px;
+    }
+
+    h1 {
+      font-size: 0.95rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h1::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--black);
+      margin: 10px 0 0;
+    }
+
+    h2 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin: 40px 0 12px;
+    }
+
+    p, address {
+      font-style: normal;
+      font-size: 0.95rem;
+      line-height: 1.9;
+      color: #333;
+    }
+
+    a {
+      color: var(--black);
+    }
+
+    footer {
+      background: var(--sand);
+      border-top: 1px solid rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 20px 24px;
+      font-size: 0.8rem;
+    }
+
+    footer a {
+      color: var(--black);
+      text-decoration: underline;
+      margin: 0 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html">
+      <img src="logo_wide.png" alt="Schaalseekorn" />
+    </a>
+  </header>
+
+  <main>
+    <h1>Impressum</h1>
+
+    <address>
+      Landwirtschaftsbetrieb Stephan Struve<br />
+      Stephan Struve<br />
+      Neu-Wilhelmsthal 1<br />
+      23883 Seedorf<br />
+      <br />
+      Tel: <a href="tel:+4945457791292">04545-791292</a><br />
+      Fax: 04545-791296<br />
+      <a href="mailto:st.struve@t-online.de">st.struve@t-online.de</a>
+    </address>
+
+    <p style="margin-top: 24px;">
+      Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:<br />
+      DE 2199 80807
+    </p>
+
+    <h2>Umsetzung</h2>
+
+    <p>Konzept, Text und Design:<br />
+    Bernadette Brysch &amp; Philipp Redeker</p>
+
+    <p style="margin-top: 24px;">Bilder:<br />
+    Siegfried Dreyer<br />
+    Yvonne &amp; Stephan Struve<br />
+    Hannelore v. Witzendorff<br />
+    Bernadette Brysch &amp; Philipp Redeker<br />
+    Niklas Hamann / unsplash.com</p>
+  </main>
+
+  <footer>
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+  </footer>
+
+</body>
+</html>
