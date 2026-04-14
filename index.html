@@ -92,45 +92,63 @@
       margin: 12px auto 0;
     }
 
-    /* ── THREE PILLARS ── */
-    #pillars {
+    /* ── ABOUT ── */
+    #about {
       background: var(--white);
     }
 
-    .pillars-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 48px;
-    }
-
-    .pillar {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .pillar-label {
-      font-size: 0.8rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #666;
-      margin-bottom: 8px;
-    }
-
-    .pillar h3 {
-      font-family: var(--font-sans);
-      font-size: clamp(1.1rem, 2vw, 1.5rem);
+    .about-heading {
+      font-size: clamp(1.2rem, 2.5vw, 1.7rem);
       font-weight: 700;
-      margin-bottom: 20px;
-      line-height: 1.2;
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 64px;
+      line-height: 1.4;
     }
 
-    .pillar img {
+    .about-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      margin-bottom: 72px;
+    }
+
+    .about-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .about-row.reverse {
+      direction: rtl;
+    }
+
+    .about-row.reverse > * {
+      direction: ltr;
+    }
+
+    .about-text p {
+      font-size: clamp(0.9rem, 1.4vw, 1rem);
+      line-height: 1.9;
+      color: #333;
+    }
+
+    .about-image img {
       width: 100%;
       aspect-ratio: 4/3;
       object-fit: cover;
       display: block;
+    }
+
+    @media (max-width: 768px) {
+      .about-row,
+      .about-row.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+      }
+
+      .about-image {
+        order: -1;
+      }
     }
 
     /* ── SIEGEL / ICONS ── */
@@ -227,30 +245,42 @@
     </div>
   </section>
 
-  <!-- DREI SÄULEN -->
-  <section id="pillars">
+  <!-- ÜBER UNS -->
+  <section id="about">
     <div class="section-inner">
-      <div class="pillars-grid">
 
-        <div class="pillar">
-          <span class="pillar-label">Unser Familienbetrieb</span>
-          <h3>Neu-Willhelmsthal</h3>
-          <img src="teaser_unser_hof.png" alt="Unser Hof in Neu-Willhelmsthal" />
+      <h2 class="about-heading">Backstarkes Weizenmehl aus naturbewusstem Ackerbau</h2>
+
+      <!-- Zeile 1: Text links, Bild rechts -->
+      <div class="about-row">
+        <div class="about-text">
+          <p>Stephan und Yvonne Struve übernahmen 2001 von Stephans Eltern den Familienbetrieb Neu-Wilhelmsthal in Seedorf am Schaalsee. Die Landwirte mit Leib und Seele bauen heute rund um den Schaalsee Feldfrüchte an. Auf den Feldern in der geschwungenen Landschaft gedeihen Roggen, Weizen, Gerste, Raps, Zuckerrüben und Mais. Unterstützt werden Stephan und Yvonne von ihren Mitarbeitern und ihren vier Söhnen. Zur Erntezeit im Sommer kommen ehemalige Auszubildende und Freunde als Erntehelfer dazu. Dann wird Tag und Nacht gemeinsam gearbeitet, um das Korn trocken in die Scheune zu bringen. Das Arbeiten und Leben mit der Natur bereitet allen auf dem Hof große Freude. Eine abwechslungsreiche Fruchtfolge für die Artenvielfalt, Rückzugsorte für das Wild und Blühstreifen zum Schutz der Insekten liegen der Familie Struve besonders am Herzen.</p>
         </div>
-
-        <div class="pillar">
-          <span class="pillar-label">Unser Angebot</span>
-          <h3>Hochwertig und regional</h3>
-          <img src="teaser_unser_mehl.png" alt="Schaalseekorn Produkte – Weizenmehl und Raps" />
+        <div class="about-image">
+          <img src="teaser_unser_hof.png" alt="Familienbetrieb Neu-Wilhelmsthal am Schaalsee" />
         </div>
-
-        <div class="pillar">
-          <span class="pillar-label">Unser Anliegen</span>
-          <h3>Naturbewusster Ackerbau</h3>
-          <img src="teaser_unser_naturbewusstsein.png" alt="Naturbewusster Ackerbau an der Schaalseeregion" />
-        </div>
-
       </div>
+
+      <!-- Zeile 2: Bild links, Text rechts -->
+      <div class="about-row reverse">
+        <div class="about-text">
+          <p>Mit Blick auf eine nachhaltig gestaltete Zukunft gründeten sie 2021 Schaalseekorn, um ihren Weizen als besonders backstarkes Mehl dort anzubieten, wo er wächst: rund um den Schaalsee. Die Wahl des richtigen Weizens und die optimale Pflege sind die ersten wichtigen Schritte auf dem Weg zu einer guten Backstärke. Daneben verfügt Neu-Wilhelmsthal über moderne Silos mit Getreidetrocknung, die eine Ernte bei feuchterem Wetter ermöglichen. So wird das Risiko einer witterungsbedingten Verzögerung vermieden und eine Ernte auf dem Höhepunkt der Reife sichergestellt, die höchste Backqualität garantiert. Anschließend wird der Weizen in Meyers Windmühle in Bardowick mit purer Windkraft gemahlen. In den Tüten landet keine Mischqualität – sondern reines, backstarkes Schaalseekorn.</p>
+        </div>
+        <div class="about-image">
+          <img src="teaser_unser_mehl.png" alt="Schaalseekorn Weizenmehl – backstark und regional" />
+        </div>
+      </div>
+
+      <!-- Zeile 3: Text links, Bild rechts -->
+      <div class="about-row">
+        <div class="about-text">
+          <p>Das Land, das Familie Struve bewirtschaftet, ist eine seit vielen Jahrhunderten bestehende Kulturlandschaft. Diese gilt es zu erhalten. Deshalb werden dem Boden über die Jahre nicht mehr Nährstoffe entzogen als zugeführt. Die Artenvielfalt der Schaalseeregion liegt Struves besonders am Herzen. Darum setzt ihr Betrieb auf eine abwechslungsreiche Fruchtfolge, Blühstreifen für Insekten und Rückzugsmöglichkeiten für Wild und Vögel in Feldgehölzen und Knicks. Mindestens fünf Prozent der Gesamtfläche besteht aus Feldgehölzen, Knicks sowie stillgelegten Ackerflächen und wird aus der intensiven Nutzung herausgenommen. Durch diesen naturbewussten Ackerbau hat Neu-Wilhelmsthal eine hervorragende Grundwasserqualität und viele Insekten, Vögel und Wildtiere.</p>
+        </div>
+        <div class="about-image">
+          <img src="teaser_unser_naturbewusstsein.png" alt="Naturbewusster Ackerbau – Artenvielfalt in der Schaalseeregion" />
+        </div>
+      </div>
+
     </div>
   </section>
 
