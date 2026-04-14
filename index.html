@@ -98,12 +98,24 @@
     }
 
     .about-heading {
-      font-size: clamp(1.2rem, 2.5vw, 1.7rem);
-      font-weight: 700;
+      font-family: var(--font-sans);
+      font-size: clamp(1rem, 2vw, 1.5rem);
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
       text-align: center;
-      max-width: 680px;
+      max-width: 760px;
       margin: 0 auto 64px;
-      line-height: 1.4;
+      line-height: 1.6;
+    }
+
+    .about-heading::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 1px;
+      background: var(--black);
+      margin: 14px auto 0;
     }
 
     .about-row {
@@ -267,7 +279,7 @@
           <p>Mit Blick auf eine nachhaltig gestaltete Zukunft gründeten sie 2021 Schaalseekorn, um ihren Weizen als besonders backstarkes Mehl dort anzubieten, wo er wächst: rund um den Schaalsee. Die Wahl des richtigen Weizens und die optimale Pflege sind die ersten wichtigen Schritte auf dem Weg zu einer guten Backstärke. Daneben verfügt Neu-Wilhelmsthal über moderne Silos mit Getreidetrocknung, die eine Ernte bei feuchterem Wetter ermöglichen. So wird das Risiko einer witterungsbedingten Verzögerung vermieden und eine Ernte auf dem Höhepunkt der Reife sichergestellt, die höchste Backqualität garantiert. Anschließend wird der Weizen in Meyers Windmühle in Bardowick mit purer Windkraft gemahlen. In den Tüten landet keine Mischqualität – sondern reines, backstarkes Schaalseekorn.</p>
         </div>
         <div class="about-image">
-          <img src="teaser_unser_mehl.png" alt="Schaalseekorn Weizenmehl – backstark und regional" />
+          <img src="baghoney.jpg" alt="Schaalseekorn Weizenmehl – backstark und regional" />
         </div>
       </div>
 

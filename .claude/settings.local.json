@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:yvonnestruve77.wixsite.com)"
+      "WebFetch(domain:yvonnestruve77.wixsite.com)",
+      "mcp__Claude_Preview__preview_start"
     ]
   }
 }
